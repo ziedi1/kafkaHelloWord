@@ -20,7 +20,7 @@ public class SampleProducer {
         properties.put("bootstrap.servers",  "localhost:9092");
         properties.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
         properties.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
-        ProducerRecord producerRecord = new ProducerRecord("channel", "name", "first message");
+        ProducerRecord producerRecord = new ProducerRecord("first_topic", "name", "first message");
 
         KafkaProducer kafkaProducer = new KafkaProducer<>(properties);
         kafkaProducer.send(producerRecord);
